@@ -1,4 +1,4 @@
-from conans import ConanFile, CMake
+from conans import ConanFile, CMake, tools
 
 
 class TweetnaclConan(ConanFile):
@@ -14,14 +14,13 @@ class TweetnaclConan(ConanFile):
     generators = "cmake"
     exports_sources = "src/*"
 
+    def configure(self):
+        del self.settings.compiler.libcxx
+
     def build(self):
         cmake = CMake(self)
         cmake.configure(source_folder="src")
         cmake.build()
-
-        # Explicit way:
-        # self.run('cmake %s/src %s' % (self.source_folder, cmake.command_line))
-        # self.run("cmake --build . %s" % cmake.build_config)
 
     def package(self):
         self.copy("*.h", dst="include", src="src")
@@ -32,4 +31,4 @@ class TweetnaclConan(ConanFile):
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["hello"]
+        self.cpp_info.libs = tools.collect_libs(self)
