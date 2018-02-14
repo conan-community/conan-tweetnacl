@@ -1,15 +1,16 @@
+#include <fcntl.h>
 #include <stdio.h>
 #include <string.h>
-
-#include "tweetnacl.h"
-
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <fcntl.h>
 #include <unistd.h>
 
-/* it's really stupid that there isn't a syscall for this */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+#include "tweetnacl.h"
+/* it's really stupid that there isn't a syscall for this */
 static int fd = -1;
 
 void randombytes(unsigned char *x,unsigned long long xlen)
@@ -37,6 +38,11 @@ void randombytes(unsigned char *x,unsigned long long xlen)
     xlen -= i;
   }
 }
+
+#ifdef __cplusplus
+}
+#endif
+
 
 int main(int argc, char *argv[]) {
     char secret_key[] = "test_secret_key";
