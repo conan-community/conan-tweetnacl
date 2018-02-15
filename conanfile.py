@@ -11,6 +11,7 @@ class TweetnaclConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
     exports_sources = "src/*"
+    build_policy = "missing"
 
     def configure(self):
         del self.settings.compiler.libcxx

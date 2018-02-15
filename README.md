@@ -1,7 +1,7 @@
 # conan-tweetnacl
 
-Travis : [![Build Status](https://travis-ci.org/conan-community/conan-tweetnacl.svg?branch=testing%2F20140427)](https://travis-ci.org/conan-community/conan-tweetnacl)
-AppVeyor : [![Build status](https://ci.appveyor.com/api/projects/status/5k0yylxinju7nkqs/branch/testing/20140427?svg=true)](https://ci.appveyor.com/project/pvicente/conan-tweetnacl/branch/testing/20140427)
+Travis : [![Build Status](https://travis-ci.org/conan-community/conan-tweetnacl.svg?branch=stable%2F20140427)](https://travis-ci.org/conan-community/conan-tweetnacl)
+AppVeyor : [![Build status](https://ci.appveyor.com/api/projects/status/5k0yylxinju7nkqs/branch/stable/20140427?svg=true)](https://ci.appveyor.com/project/pvicente/conan-tweetnacl/branch/stable/20140427)
 
 
 [Conan.io](https://conan.io) package for [tweetnacl](http://tweetnacl.cr.yp.to/index.html) project.
