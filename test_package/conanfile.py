@@ -17,6 +17,5 @@ class TweetnaclTestConan(ConanFile):
         self.copy('*.so*', dst='bin', src='lib')
 
     def test(self):
-        if not tools.cross_building(self.settings):
-            os.chdir("bin")
-            self.run(".%sexample" % os.sep)
+        os.chdir("bin")
+        self.run(".%sexample" % os.sep)
