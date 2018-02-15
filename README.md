@@ -19,6 +19,17 @@ If you handle multiple dependencies in your project is better to add a *conanfil
     txt
     cmake
 
+## Example
+
+See [example.cpp](test_package/example.cpp) on how to use the library which needs
+the external implementation of a [C function randombytes](test_package/example.cpp#L13)
+with the following signature:
+
+
+```c
+void randombytes(unsigned char * ptr,unsigned int length)
+```
+
 ## License
 
 Public Domain
