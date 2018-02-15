@@ -4,13 +4,11 @@ from conans import ConanFile, CMake, tools
 class TweetnaclConan(ConanFile):
     name = "tweetnacl"
     version = "20140427"
-    license = "<Put the package license here>"
+    license = "Public Domain"
     homepage = "https://tweetnacl.cr.yp.to/"
-    url = "<Package recipe repository url here, for issues about the package>"
-    description = "<Description of Tweetnacl here>"
+    url = "https://github.com/conan-community/conan-tweetnacl"
+    description = "TweetNaCl is the world's first auditable high-security cryptographic library"
     settings = "os", "compiler", "build_type", "arch"
-    options = {"shared": [True, False]}
-    default_options = "shared=False"
     generators = "cmake"
     exports_sources = "src/*"
 
