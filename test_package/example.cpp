@@ -49,7 +49,7 @@ void randombytes(unsigned char * ptr,unsigned int length)
 #ifdef __cplusplus
 }
 #endif
-#include <iostream>
+#include <stdexcept>
 #include <string.h>
 
 typedef unsigned char u8;
