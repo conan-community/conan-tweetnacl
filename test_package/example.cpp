@@ -4,21 +4,24 @@ extern "C" {
 #include "tweetnacl.h"
 
 /* Library needs external randombytes implemented */
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 void randombytes(unsigned char * ptr,unsigned int length)
 {
+    int i;
     srand(time(NULL));
-    ptr = new unsigned char(rand());
+
+    for (i = 0; i < length; i++) {
+        ptr[i] = (unsigned char)rand();
+    }
 }
 
 #ifdef __cplusplus
 }
 #endif
 
-
+#include <stdio.h>
 #include <stdexcept>
 #include <string.h>
 
