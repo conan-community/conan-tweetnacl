@@ -4,7 +4,7 @@
 
 ## Package Deprecation Notice
 
-This package has been moved to (Conan Center Index)[https://github.com/conan-io/conan-center-index].
+This package has been moved to [Conan Center Index](https://github.com/conan-io/conan-center-index).
 
 Bincrafters will keep this version of the package on Github and Bintray, however it will no longer be maintained or supported.
 Users are advised to update their projects to use the official Conan package maintained by Conan Center Index.
