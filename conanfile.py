@@ -15,6 +15,7 @@ class TweetnaclConan(ConanFile):
 
     def configure(self):
         del self.settings.compiler.libcxx
+        self.output.warn("[OBSOLETE] The package tweetnacl has been moved to Conan Center Index. Install tweetnacl/20140427@ instead.")
 
     def source(self):
         url = "%s/%s/" % (self.homepage, self.version)
